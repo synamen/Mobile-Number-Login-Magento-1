@@ -1,0 +1,44 @@
+<?xml version="1.0"?>   
+<layout version="0.1.0">   
+<default>
+    <reference name="head">
+        <action ifconfig="mobile_number_login/settings/enabled" method="addJs"><script>mobile.js</script></action>
+    </reference>
+</default>
+
+ <customer_account_create>  
+    <reference name="customer_form_register">
+		    <action ifconfig="mobile_number_login/settings/enabled" method="setTemplate"><template>mobile/customer/register.phtml</template></action>
+	    </reference>        
+   </customer_account_create> 
+
+
+   <customer_account_edit>
+     <reference name="customer_edit">
+          <action ifconfig="mobile_number_login/settings/enabled" method="setTemplate"><template>mobile/customer/edit.phtml</template></action>
+      </reference>     
+    </customer_account_edit>  
+
+
+
+    <checkout_onepage_index>
+      <reference name="checkout.onepage.login">
+            <action ifconfig="mobile_number_login/settings/enabled" method="setTemplate"><template>mobile/checkout/login.phtml</template></action>
+        </reference>
+       <reference name="checkout.onepage.billing">
+            <action ifconfig="mobile_number_login/settings/enabled" method="setTemplate"><template>mobile/checkout/billing.phtml</template></action>
+        </reference>
+        <reference name="checkout.onepage.shipping">
+            <action ifconfig="mobile_number_login/settings/enabled" method="setTemplate"><template>mobile/checkout/shipping.phtml</template></action>
+        </reference>
+    </checkout_onepage_index>
+
+     <customer_account_login>
+      <reference name="customer_form_login">
+            <action ifconfig="mobile_number_login/settings/enabled" method="setTemplate"><template>mobile/customer/login.phtml</template></action>
+      </reference>
+    </customer_account_login>
+
+
+</layout>   
+	
